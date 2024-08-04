@@ -142,7 +142,9 @@
         "htop",
         "btop",
         "linux-firmware",
-	"less"
+	"less",
+	"code",
+	"steam"
     ],
     "parallel downloads": 0,
     "profile_config": {
