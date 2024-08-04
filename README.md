@@ -1,5 +1,11 @@
 # archinstall-config
-My user_config for archinstall, only really suitable for a single 1TB disk system
+My user_config for archinstall, only really suitable as-is for a single 1TB disk system using AMD. With a few small changes it would also be fine for other single disk systems.
+
+This will;
+
+1. Install two kernels, one regular and one LTS
+2. Install KDE and a few other useful packages I use (including Steam)
+3. Format an NVMe with BTRFS and a very simple layout
 
 ## How
 
