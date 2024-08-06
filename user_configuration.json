@@ -1,175 +1,166 @@
 {
-    "additional-repositories": [],
-    "archinstall-language": "English",
-    "audio_config": {
-        "audio": "pipewire"
-    },
-    "bootloader": "Systemd-boot",
-    "config_version": "2.8.1",
-    "debug": false,
-    "disk_config": {
-        "config_type": "default_layout",
-        "device_modifications": [
-            {
-                "device": "/dev/nvme0n1",
-                "partitions": [
-                    {
-                        "btrfs": [],
-                        "dev_path": null,
-                        "flags": [
-                            "Boot",
-                            "ESP"
-                        ],
-                        "fs_type": "fat32",
-                        "mount_options": [],
-                        "mountpoint": "/boot",
-                        "obj_id": "0949a259-133d-4bfd-b12e-301ab628f8ff",
-                        "size": {
-                            "sector_size": {
-                                "unit": "B",
-                                "value": 512
-                            },
-                            "unit": "GiB",
-                            "value": 1
-                        },
-                        "start": {
-                            "sector_size": {
-                                "unit": "B",
-                                "value": 512
-                            },
-                            "unit": "MiB",
-                            "value": 1
-                        },
-                        "status": "create",
-                        "type": "primary"
-                    },
-                    {
-                        "btrfs": [
-                            {
-                                "mountpoint": "/",
-                                "name": "@"
-                            },
-                            {
-                                "mountpoint": "/home",
-                                "name": "@home"
-                            },
-                            {
-                                "mountpoint": "/var/log",
-                                "name": "@log"
-                            },
-                            {
-                                "mountpoint": "/var/cache/pacman/pkg",
-                                "name": "@pkg"
-                            },
-                            {
-                                "mountpoint": "/.snapshots",
-                                "name": "@.snapshots"
-                            }
-                        ],
-                        "dev_path": null,
-                        "flags": [],
-                        "fs_type": "btrfs",
-                        "mount_options": [
-                            "nodatacow"
-                        ],
-                        "mountpoint": null,
-                        "obj_id": "0792fcec-0a98-47f4-970b-1fbac0398321",
-                        "size": {
-                            "sector_size": {
-                                "unit": "B",
-                                "value": 512
-                            },
-                            "unit": "B",
-                            "value": 999129047040
-                        },
-                        "start": {
-                            "sector_size": {
-                                "unit": "B",
-                                "value": 512
-                            },
-                            "unit": "B",
-                            "value": 1074790400
-                        },
-                        "status": "create",
-                        "type": "primary"
-                    }
-                ],
-                "wipe": true
-            }
-        ]
-    },
-    "disk_encryption": null,
-    "hostname": "razorback",
-    "kernels": [
-        "linux",
-        "linux-lts"
-    ],
-    "locale_config": {
-        "kb_layout": "us",
-        "sys_enc": "UTF-8",
-        "sys_lang": "en_US"
-    },
-    "mirror_config": {
-        "custom_mirrors": [],
-        "mirror_regions": {
-            "Australia": [
-                "https://sydney.mirror.pkgbuild.com/$repo/os/$arch",
-                "https://syd.mirror.rackspace.com/archlinux/$repo/os/$arch",
-                "https://mirror.aarnet.edu.au/pub/archlinux/$repo/os/$arch",
-                "https://gsl-syd.mm.fcix.net/archlinux/$repo/os/$arch",
-                "https://au.mirrors.cicku.me/archlinux/$repo/os/$arch",
-                "https://archlinux.mirror.digitalpacific.com.au/$repo/os/$arch",
-                "http://syd.mirror.rackspace.com/archlinux/$repo/os/$arch",
-                "http://mirror.internode.on.net/pub/archlinux/$repo/os/$arch",
-                "http://gsl-syd.mm.fcix.net/archlinux/$repo/os/$arch",
-                "http://ftp.iinet.net.au/pub/archlinux/$repo/os/$arch",
-                "http://au.mirrors.cicku.me/archlinux/$repo/os/$arch",
-                "http://archlinux.mirror.digitalpacific.com.au/$repo/os/$arch"
-            ]
-        }
-    },
-    "network_config": {
-        "type": "nm"
-    },
-    "no_pkg_lookups": false,
-    "ntp": true,
-    "offline": false,
-    "packages": [
-	"base-devel",
-	"btop",
-	"btrfs-progs",
-	"code",
-	"curl",
-	"firefox",
-	"git",
-	"htop",
-	"less",
-	"linux-firmware",
-	"neovim",
-	"snapper",
-	"steam",
-	"wget"
-    ],
-    "parallel downloads": 0,
-    "profile_config": {
-        "gfx_driver": "AMD / ATI (open-source)",
-        "greeter": "sddm",
-        "profile": {
-            "custom_settings": {
-                "KDE Plasma": {}
+  "additional-repositories": [],
+  "archinstall-language": "English",
+  "audio_config": {
+    "audio": "pipewire"
+  },
+  "bootloader": "Systemd-boot",
+  "config_version": "2.8.1",
+  "debug": false,
+  "disk_config": {
+    "config_type": "default_layout",
+    "device_modifications": [
+      {
+        "device": "/dev/nvme0n1",
+        "partitions": [
+          {
+            "btrfs": [],
+            "dev_path": null,
+            "flags": ["Boot", "ESP"],
+            "fs_type": "fat32",
+            "mount_options": [],
+            "mountpoint": "/boot",
+            "obj_id": "0949a259-133d-4bfd-b12e-301ab628f8ff",
+            "size": {
+              "sector_size": {
+                "unit": "B",
+                "value": 512
+              },
+              "unit": "GiB",
+              "value": 1
             },
-            "details": [
-                "KDE Plasma"
+            "start": {
+              "sector_size": {
+                "unit": "B",
+                "value": 512
+              },
+              "unit": "MiB",
+              "value": 1
+            },
+            "status": "create",
+            "type": "primary"
+          },
+          {
+            "btrfs": [
+              {
+                "mountpoint": "/",
+                "name": "@"
+              },
+              {
+                "mountpoint": "/home",
+                "name": "@home"
+              },
+              {
+                "mountpoint": "/var/log",
+                "name": "@log"
+              },
+              {
+                "mountpoint": "/var/cache/pacman/pkg",
+                "name": "@pkg"
+              },
+              {
+                "mountpoint": "/.snapshots",
+                "name": "@.snapshots"
+              }
             ],
-            "main": "Desktop"
-        }
-    },
-    "script": "guided",
-    "silent": false,
-    "skip_ntp": false,
-    "skip_version_check": false,
-    "swap": true,
-    "timezone": "Australia/Adelaide",
-    "uki": true,
-    "version": "2.8.1"
+            "dev_path": null,
+            "flags": [],
+            "fs_type": "btrfs",
+            "mount_options": ["nodatacow"],
+            "mountpoint": null,
+            "obj_id": "0792fcec-0a98-47f4-970b-1fbac0398321",
+            "size": {
+              "sector_size": {
+                "unit": "B",
+                "value": 512
+              },
+              "unit": "B",
+              "value": 999129047040
+            },
+            "start": {
+              "sector_size": {
+                "unit": "B",
+                "value": 512
+              },
+              "unit": "B",
+              "value": 1074790400
+            },
+            "status": "create",
+            "type": "primary"
+          }
+        ],
+        "wipe": true
+      }
+    ]
+  },
+  "disk_encryption": null,
+  "hostname": "razorback",
+  "kernels": ["linux", "linux-lts"],
+  "locale_config": {
+    "kb_layout": "us",
+    "sys_enc": "UTF-8",
+    "sys_lang": "en_US"
+  },
+  "mirror_config": {
+    "custom_mirrors": [],
+    "mirror_regions": {
+      "Australia": [
+        "https://sydney.mirror.pkgbuild.com/$repo/os/$arch",
+        "https://syd.mirror.rackspace.com/archlinux/$repo/os/$arch",
+        "https://mirror.aarnet.edu.au/pub/archlinux/$repo/os/$arch",
+        "https://gsl-syd.mm.fcix.net/archlinux/$repo/os/$arch",
+        "https://au.mirrors.cicku.me/archlinux/$repo/os/$arch",
+        "https://archlinux.mirror.digitalpacific.com.au/$repo/os/$arch",
+        "http://syd.mirror.rackspace.com/archlinux/$repo/os/$arch",
+        "http://mirror.internode.on.net/pub/archlinux/$repo/os/$arch",
+        "http://gsl-syd.mm.fcix.net/archlinux/$repo/os/$arch",
+        "http://ftp.iinet.net.au/pub/archlinux/$repo/os/$arch",
+        "http://au.mirrors.cicku.me/archlinux/$repo/os/$arch",
+        "http://archlinux.mirror.digitalpacific.com.au/$repo/os/$arch"
+      ]
+    }
+  },
+  "network_config": {
+    "type": "nm"
+  },
+  "no_pkg_lookups": false,
+  "ntp": true,
+  "offline": false,
+  "packages": [
+    "base-devel",
+    "btop",
+    "btrfs-progs",
+    "code",
+    "curl",
+    "firefox",
+    "git",
+    "htop",
+    "less",
+    "linux-firmware",
+    "neovim",
+    "snapper",
+    "steam",
+    "wget",
+    "zsh"
+  ],
+  "parallel downloads": 0,
+  "profile_config": {
+    "gfx_driver": "AMD / ATI (open-source)",
+    "greeter": "sddm",
+    "profile": {
+      "custom_settings": {
+        "KDE Plasma": {}
+      },
+      "details": ["KDE Plasma"],
+      "main": "Desktop"
+    }
+  },
+  "script": "guided",
+  "silent": false,
+  "skip_ntp": false,
+  "skip_version_check": false,
+  "swap": true,
+  "timezone": "Australia/Adelaide",
+  "uki": true,
+  "version": "2.8.1"
 }
